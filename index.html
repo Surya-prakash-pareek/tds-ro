@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Correlation Results</title>
+</head>
+<body>
+
+  <h1>Correlation Results</h1>
+  <pre id="output">Loading data...</pre>
+
+  <script>
+    fetch("https://raw.githubusercontent.com/Surya-prakash-pareek/tds-ro/refs/heads/main/answer.json")
+      .then(response => response.json())
+      .then(data => {
+        console.log("Correlation Data:", data);
+        document.getElementById("output").textContent = JSON.stringify(data, null, 2);
+      });
+  </script>
+
+</body>
+</html>
